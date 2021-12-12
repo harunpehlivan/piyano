@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:700italic);
+
+body{
+  background-color:#222;
+}
+
+overlay{
+  font-family:Trajan Pro,serif;
+  text-shadow:1px 1px 1px #c90;
+}
+
+keyboard{
+  position:fixed;
+  display:table;
+  overflow:hidden;
+  width:70%;
+  height:60%;
+  left:15%;
+  top:105%;
+  background-color:#666;
+  border-radius:10px;
+  transition:1500ms;
+  box-shadow:0 0 50px #222;
+}
+
+sharp{
+  width:4%;
+  height:65%; 
+  top:25px;
+  background-color:#111;
+  box-shadow:5px 5px 5px rgba(0,0,0,0.2);
+  border-radius:0 0 5px 5px;
+  float:left;
+  margin-left:4.9%;
+  margin-right:-2.25%;
+  cursor:pointer;
+  pointer-events:auto;
+}
+
+full{
+  width:6%; 
+  height:65%; 
+  top:25px;
+  background-color:#ddd;
+  box-shadow:5px 5px 5px rgba(0,0,0,0.2);
+  border-radius:0 0 5px 5px;
+  float:left;
+  margin-left:0.625%;
+  cursor:pointer;
+}
+
+settings{
+  position:fixed;
+  display:block;
+  width:250px;
+  height:95px;
+  /*background-color:#444;*/
+  border-radius:3px;
+}
+
+button{
+  position:relative;
+  top:5px;
+  left:5px;
+  background-color:#999;
+  border:none;
+  padding:10px;
+  font-family:Trebuchet MS;
+  font-weight:bold;
+  color:#333;
+  float:left;
+  margin-right:5px;
+  transition:200ms;
+}
+
+paper{
+  position:fixed;
+  display:block;
+  width:60%;
+  height:90%;
+  margin-left:20%;
+  top:5%;
+  background-color:#FFF0C7;
+  background-image:url(https://www.dropbox.com/s/8wylb1ywwoz9u1p/paper.jpg?raw=1);
+  border-radius:5px;
+  transition:1000ms;
+  overflow:hidden;
+}
+
+lazer{
+  position:fixed;
+  width:62%;
+  margin-left:19%;
+  top:20%;
+  height:2px;
+  background-color:#ccf;
+  box-shadow:0 0 10px blue;
+  animation:throb 1s alternate infinite;
+  opacity:0;
+  transition:1000ms;
+}
+
+button:hover{
+  background-color:#666;
+  cursor:pointer;
+  color:#eee;
+}
+
+bpm,rows{
+  position:fixed;
+  top:55px;
+  left:1%;
+  font-family:Trebuchet MS;
+  font-size:20px;
+  color:#ccc;
+  transition:1000ms;
+  transition-delay:300ms;
+  margin-bottom:15px;
+  cursor:default;
+}
+
+input{
+  width:40px;
+  background-color:transparent;
+  border:2px solid transparent;
+  color:#ccc;
+  font-weight:bold;
+  font-size:20px;
+  transition:1000ms;
+  transition-delay:300ms;
+}
+
+duration{
+  font-weight:bold;
+  color:#555;
+  transition:1000ms;
+  transition-delay:300ms;
+}
+
+full:active{
+  background-color:#bbb;
+  background: -webkit-linear-gradient(top, rgba(221,221,221,1) 0%,rgba(150,150,150,1) 100%);
+  box-shadow:none;
+  cursor:hand;
+}
+
+sharp:active{
+  background-color:#555;
+  background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(50,50,50,1) 100%);
+  box-shadow:none;
+  cursor:hand;
+}
+
+::selection{
+  background-color:transparent;
+}
+
+@keyframes throb{
+  to{
+    background-color:white;
+    box-shadow:0 0 20px blue;
+  }
+}
